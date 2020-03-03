@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Svelte анімації (для галочки чи дійсно корисна фіча)</title>
+		<title>Web maps essentials</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -28,8 +28,7 @@
 			<div class="slides">
 <!--				slide 1-->
 				<section>
-					<h1>Svelte анімації</h1>
-					<h4>(для галочки чи дійсно корисна фіча)</h4>
+					<h1>Web maps essentials</h1>
 					<br />
 					<br />
 					<br />
@@ -38,363 +37,180 @@
 						<p>DOM.RIA (напрям “Новобудови України”)</p>
 					</div>
 				</section>
-				<!--				slide 2-->
+				<section
+					data-background-iframe="https://www.ventusky.com/?p=49.15;32.28;6&l=temperature-2m&w=soft"></section>
+				<section>
+					<h4>План</h4>
+					<ul>
+						<li>З чого складаються карти</li>
+						<li>Тайли і їх типи</li>
+						<li>GeoJson</li>
+						<li>Варіанти виведення даних</li>
+						<li>Можливості векторних карт</li>
+						<li>Створення векторних тайлів</li>
+						<li>Допоміжні інструменти для роботи з картами</li>
+					</ul>
+				</section>
 				<section>
 					<section>
-						<h2>
-							Svelte
-						</h2>
-						<img src="images/svelte.jpeg" />
+						<h4>З чого складаються карти</h4>
+						<img src="images/map-layers.jpg" />
 					</section>
 					<section>
-						<b>Svelte</b> - кібернетично розширені веб-програми
-						<img src="images/what1.gif" />
-					</section>
-					<section>
-						<p>
-							<b>Svelte</b> - компілятор для перетворення Svelte компонентів в ванільний js
-						</p>
-						<img src="images/svelte-react.jpg" />
+						<img src="images/map-layers.png" />
 					</section>
 				</section>
-				<!--				slide 3-->
-				<section>
-						<h2>Svelte анімації</h2>
-						<iframe width="750" height="430"
-										src="https://intense-bayou-59978.herokuapp.com/intro"></iframe>
-				</section>
-				<!--slide 4-->
 				<section>
 					<section>
-						<h4 class="navigate-down">Директиви для роботи з анімаціями</h4>
-<pre>
-<code class="hljs" data-line-numbers="2,5,8,11">
-<h1 transition:fade>
-	Hello Svelte
-</h1>
-<p in:scale out:slide>
-	Hello Svelte
-</p>
-<li animate:flip>
-		Hello Svelte
-	</li>
-<div use:fanyAnimation>
-	Hello Svelte
-</div>
-</code>
-</pre>
+						<h4>Растрові тайли</h4>
+					</section>
+					<section data-background-iframe="http://34.65.150.49:8080/public/dist/leaflet-example.html">
 					</section>
 					<section>
-						<div><b>transition</b> - для анімацій появи і зникнення елементів</div>
-						<iframe width="750" height="450"
-										src="https://intense-bayou-59978.herokuapp.com/transition"></iframe>
-					</section>
-					<section>
+						<h4>Переваги</h4>
 						<ul>
 							<li>
-								<b>in</b> - для анімацій появи елементів
+								Мінімальне навантаження на процесор користувача
 							</li>
 							<li>
-								<b>out</b> - для анімацій зникнення елементів
+								Простота розробки софту для відображення
 							</li>
 						</ul>
-						<iframe width="750" height="450"
-										src="https://intense-bayou-59978.herokuapp.com/in-out"></iframe>
 					</section>
-
 					<section>
-						<div>
-							<b>animate</b> - для анімацій при зміні положення елемента в масиві
-						</div>
-					</section>
-					<section data-background-iframe="https://intense-bayou-59978.herokuapp.com/animate"></section>
-					<section>
-						<div>
-							<b>use</b> - для складних анімацій які не можна створити стандартними методами
-						</div>
-
-						<iframe width="750" height="450"
-										src="https://intense-bayou-59978.herokuapp.com/pannable"></iframe>
+						<h4>Недоліки</h4>
+						<ul>
+							<li>
+								Дуже великий обсяг, в разі jpeg-тайлів - замилювання
+							</li>
+							<li>
+								Неможливість динамічної зміни стилів
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section>
-					<h4 class="navigate-down">Як працюють анімації в <b>svelte</b>?</h4>
-					<b style="margin-right: 34px;font-size: 150px;">CSS</b>
-					<b style="vertical-align: super;font-size: 75px;">VS</b>
-					<b style="margin-left: 34px;font-size: 150px;">TICK</b>
+					<section>
+						<h4>Векторні тайли</h4>
+					</section>
+					<section data-background-iframe="http://34.65.150.49:8080/public/dist/mapbox-example.html">
+					</section>
+					<section>
+						<h4>Переваги</h4>
+						<ul>
+							<li>
+								Набагато менший об'єм даних
+							</li>
+							<li>
+								Динамічна зміна відображення елементів
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Недоліки</h4>
+						<ul>
+							<li>
+								Ресурсомісткість і тривалість відтворення
+							</li>
+<!--							<li>-->
+<!--								В усіх свої формати векторних карт-->
+<!--							</li>-->
+						</ul>
+					</section>
 				</section>
-				<section>
-					<h3>Варіанти створення анімацій в Svelte</h3>
-				</section>
-				<section>
-					<section>
-						<img width="700" src="images/anim1.jpeg" />
-						<div>
-							<h4>easy way</h4>
-							<h5>(заюзати вбудовані анімації)</h5>
-						</div>
-					</section>
-					<section>
-							<b>Вбудовані транзішини</b>
-						<br>
-						<br>
-						<pre>
-<code>
-transition:fade|blur|fly|slide|scale|draw={params}
-in:fade|blur|fly|slide|scale|draw={params}
-out:fade|blur|fly|slide|scale|draw={params}
-
-</code>
-						</pre>
-					</section>
-
-					<section>
-						<iframe width="750" height="450"
-										src="https://intense-bayou-59978.herokuapp.com/fade"></iframe>
-					</section>
-					<section>
-						<b>Вбудовані анімації:</b>
-						<br>
-						<br>
-						<pre>
-<code>
-	animate:flip={params}
-
-</code>
-						</pre>
-					</section>
-					<section data-background-iframe="https://intense-bayou-59978.herokuapp.com/animate"></section>
-
-				</section>
-				<section>
-					<section>
-						<img src="images/anim2.jpg" />
-						<div>
-							<h4>Jedi way</h4>
-							<h5>(Написати власну анімацію)</h5>
-						</div>
-					</section>
-					<section>
-						<h3>Transition API</h3>
-						<pre>
-<code>
-transition = (node: HTMLElement, params: any) => {
-	delay?: number,
-	duration?: number,
-	easing?: (t: number) => number,
-	css?: (t: number, u: number) => string,
-	tick?: (t: number, u: number) => void
-}
-</code>
-</pre>
-
-					</section>
-					<section>
-						<h5>css transition</h5>
-						<iframe width="750" height="450"
-										src="https://intense-bayou-59978.herokuapp.com/whoosh"></iframe>
-					</section>
-					<section>
-						<h5>js transition</h5>
-						<iframe width="750" height="450"
-										src="https://intense-bayou-59978.herokuapp.com/js-transition"></iframe>
-					</section>
-					<section>
-						<h5>css animation</h5>
-					<pre>
-<code>
-animation = (
- node: HTMLElement,
- { from: DOMRect, to: DOMRect },
- params: any
-) => {
-	delay?: number,
-	duration?: number,
-	easing?: (t: number) => number,
-	css?: (t: number, u: number) => string,
-	tick?: (t: number, u: number) => void
-}
-</code>
-</pre>
-					</section>
-					<section data-background-iframe="https://intense-bayou-59978.herokuapp.com/whizz"></section>
-				</section>
-				<section>
-					<section>
-						<img src="images/anim3.jpg" />
-						<div>
-							<h4>Master way</h4>
-							<h5>(Заюзати лібу)</h5>
-						</div>
-					</section>
-					<section>
-						<h5>директива use в дії</h5>
-						<pre>
-<code>
-let action = (
- node: HTMLElement,
- parameters: any
-) => {
-	return {
-		update?: (parameters: any) => void,
-		destroy?: () => void
-	}
-}
-</code>
-</pre>
-					</section>
-					<section>
-
-						<iframe width="750" height="450"
-										src="https://intense-bayou-59978.herokuapp.com/animejs"></iframe>
-					</section>
+				<section data-background-iframe="http://34.65.150.49:8080/public/dist/compare-example.html">
 				</section>
 				<section>
 					<section>
 						<h4>
-							crossfade анімації
+							GeoJson
 						</h4>
-						<pre>
-<code>
-const [send, receive] = crossfade({
-	duration: number|(d) => number,
-	fallback: (node: HTMLElement, params: any)  => {
-		delay?: number,
-		duration?: number,
-		easing?: (t: number) => number,
-		css?: (t: number, u: number) => string,
-		tick?: (t: number, u: number) => void
-	}
-});
-in:receive="{{key: number|string}}"
-out:send="{{key: number|string}}"
-</code>
-</pre>
+						<p>GeoJSON — відкритий формат призначений для зберігання географічних структур даних, заснований на JSON</p>
 					</section>
+					<section data-background-iframe="http://34.65.150.49:8080/public/dist/leaflet-regions.html">
 
-					<section data-background-iframe="https://intense-bayou-59978.herokuapp.com/crossfade"></section>
-				</section>
-				<section>
-					<section>
-						<h4>
-							Sapper (Page transitions)
-						</h4>
-						<a target="_blank" href="https://intense-bayou-59978.herokuapp.com/page-transitions">Demo</a>
-						<br />
-						<br />
-						<a target="_blank"
-							 href="https://dev.to/buhrmi/svelte-component-transitions-5ie">
-							Оригінальна стаття
-						</a>
 					</section>
-					<section data-background-iframe="https://intense-bayou-59978.herokuapp.com/page-transitions"></section>
-
-				</section>
-				<section>
-					<section>
-						<h4>
-							Допоміжні вбудовані опції
-						</h4>
-						<img src="images/help.jpg" />
-					</section>
-					<section>
-						<h4>
-							easing
-						</h4>
-						<img src="images/easing.png" />
-					</section>
-					<section>
-						<h4>
-							Motion
-						</h4>
-					</section>
-					<section>
-						<h6>
-							tweened
-						</h6>
-						<pre>
-<code>
-store = tweened(
-	value: any,
-	options: {
-		delay: number,
-		duration number,
-		easing (t:number) => t,
-		interpolate: (a, b) => t => value,
-	}
-)
-</code>
-</pre>
-					</section>
-					<section>
-						<h6>
-							spring
-						</h6>
-						<pre>
-<code>
-store = spring(
-	value: any,
-	options: {
-		stiffness: number,
-		damping: number,
-		precision: number,
-	}
-)
-</code>
-</pre>
-					</section>
-
-					<section data-background-iframe="https://intense-bayou-59978.herokuapp.com/motion">
+					<section data-background-iframe="http://34.65.150.49:8080/public/dist/mapbox-regions.html">
 
 					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Заключення</h2>
+						<h4>Варіанти виведення даних</h4>
 					</section>
 					<section>
-
-						<p>
-							Svelte API для роботи з анімаціями має певні недоліки:
-						</p>
-						<ol>
-							<li>Підтримка</li>
-							<li>Динамічне створення анімацій</li>
-							<li>Різноманітність підходів</li>
-						</ol>
+						<h4>
+							70000 елементів на карті
+						</h4>
+						<div>
+							<a target="_blank" href="http://34.65.150.49:8080/public/dist/leaflet-points.html">
+								leaflet
+							</a>
+						</div>
+						<div>
+							<a target="_blank" href="http://34.65.150.49:8080/public/dist/mapbox-points.html">
+								mapbox-gl
+							</a>
+						</div>
 					</section>
 					<section>
-						<p>
-							Але різноманітність можливостей і підходи до реалізації дають можливість робити дуже
-							круті анімації з невеликими затратами ресурсів девайса
-						</p>
+						<h4>
+							70000 елементів на карті з кластерізацією
+						</h4>
+						<div>
+							<a target="_blank" href="http://34.65.150.49:8080/public/dist/leaflet-points-clusterization.html">
+								leaflet
+							</a>
+						</div>
+						<div>
+							<a target="_blank" href="http://34.65.150.49:8080/public/dist/mapbox-points-clusterization.html">
+								mapbox-gl
+							</a>
+						</div>
+					</section>
+					<section>
+						<h4>
+							70000 елементів на карті за допомогою тайлів
+						</h4>
+						<div>
+							<a target="_blank" href="http://34.65.150.49:8080/public/dist/leaflet-points-tiles.html">
+								leaflet
+							</a>
+						</div>
+						<div>
+							<a target="_blank" href="http://34.65.150.49:8080/public/dist/mapbox-points-tiles.html">
+								mapbox-gl
+							</a>
+						</div>
 					</section>
 				</section>
 				<section>
-					<h2 style="margin-top: 100px">Кориcні посилання</h2>
-					<section style="text-align: left; margin-left: 150px">
-						<a href="https://svelte.dev/">svelte.dev</a>
-						(<a href="https://ru.svelte.dev/">ru.svelte.dev</a>)
-						<br>
-						<a href="https://sapper.svelte.dev/">sapper.svelte.dev</a>
-						(<a href="https://ru.sapper.svelte.dev/">ru.sapper.svelte.dev</a>)
-						<br>
-						<a href="https://blog.tihomir-selak.from.hr/svg-in-svelte-world/">
-							svg in svelte world
-						</a>
-						<br>
-						<a href="https://dev.to/buhrmi/svelte-component-transitions-5ie">
-							page transitions
-						</a>
-						<br />
-						<a href="https://github.com/ryanatkn/awesome-svelte-resources">
-							awesome svelte
-						</a>
-						<br />
-						<a href="https://github.com/BoryaMogila/svelte-animations">
-							Demo
-						</a>
+					<section>
+						<h4>Можливості векторних карт</h4>
 					</section>
+					<section
+						data-background-iframe="http://34.65.150.49:8080/public/dist/mapbox-3d-buildings.html"
+					></section>
+					<section
+						data-background-iframe="http://34.65.150.49:8080/public/dist/mapbox-custom-buildings.html"
+					></section>
+					<section
+						data-background-iframe="http://34.65.150.49:8080/public/dist/mapbox-3d-model.html"
+					></section>
+				</section>
+				<section>
+					<h4>Створення векторних тайлів</h4>
+					<ul>
+						<li><a href="https://github.com/mapbox/geojson-vt">geojson-vt</a></li>
+						<li><a href="https://github.com/mapbox/tippecanoe">tippecanoe</a></li>
+					</ul>
+				</section>
+				<section>
+					<h4>Допоміжні інструменти для роботи з картами</h4>
+					<ul>
+						<li><a href="https://turfjs.org/">turfjs</a></li>
+						<li><a href="https://tileserver.readthedocs.io/en/latest/">tileserver</a></li>
+					</ul>
 				</section>
 				<section>
 					<h2>Контактні дані</h2>
