@@ -127,6 +127,94 @@
 						</h4>
 						<p>GeoJSON — відкритий формат призначений для зберігання географічних структур даних, заснований на JSON</p>
 					</section>
+					<section>
+						<h4>
+							Типи даних
+						</h4>
+						<ul>
+							<li>Point</li>
+							<li>LineString</li>
+							<li>Polygon</li>
+							<li>MultiPoint</li>
+							<li>MultiLineString</li>
+							<li>MultiPolygon</li>
+							<li>Feature</li>
+							<li>FeatureCollection</li>
+						</ul>
+					</section>
+					<section>
+						<pre>
+<code>
+{
+	"type": "FeatureCollection",
+	"features": [
+		{ "type": "Feature",
+			"geometry": {...},
+			"properties": {"prop0": "value0"}
+		},
+	]
+}
+</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+<code>
+{ "type": "Point",
+    "coordinates": [30, 10]
+}
+</code>
+<code>
+{ "type": "LineString",
+    "coordinates": [
+        [30, 10], [10, 30], [40, 40]
+    ]
+}
+</code>
+<code>
+{ "type": "Polygon",
+    "coordinates": [
+        [[30, 10], [40, 40], [20, 40], [10, 20], [30, 10]]
+    ]
+}
+</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+<code>
+{ "type": "MultiPoint",
+    "coordinates": [
+        [10, 40], [40, 30], [20, 20], [30, 10]
+    ]
+}
+</code>
+<code>
+{ "type": "MultiLineString",
+    "coordinates": [
+        [[10, 10], [20, 20], [10, 40]],
+        [[40, 40], [30, 30], [40, 20], [30, 10]]
+    ]
+}
+</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+<code>
+{ "type": "MultiPolygon",
+    "coordinates": [
+        [
+            [[40, 40], [20, 45], [45, 30], [40, 40]]
+        ],
+        [
+            [[20, 35], [10, 30], [10, 10], [30, 5]
+            [[30, 20], [20, 15], [20, 25]]
+        ]
+    ]
+}
+</code></pre>
+					</section>
 					<section data-background-iframe="https://map-examples.herokuapp.com/public/dist/leaflet-regions.html">
 
 					</section>
