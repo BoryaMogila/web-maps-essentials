@@ -37,6 +37,17 @@
 						<p>DOM.RIA (напрям “Новобудови України”)</p>
 					</div>
 				</section>
+				<section>
+					<img src="images/presentation.png" style="width: 55%" />
+					<p>Презинтація</p>
+				</section>
+				<section>
+					<img src="images/presentation.png" style="width: 55%" />
+					<p>Приклади</p>
+				</section>
+				<section>
+					<img src="images/lego-map.png" style="width: 70%" />
+				</section>
 				<section
 					data-background-iframe="https://www.ventusky.com/?p=49.15;32.28;6&l=temperature-2m&w=soft"></section>
 				<section>
@@ -61,6 +72,10 @@
 					</section>
 				</section>
 				<section>
+					<h4>Тайли і їх типи</h4>
+					<img src="images/tiles.jpg" style="width: 45%" />
+				</section>
+				<section>
 					<section>
 						<h4>Растрові тайли</h4>
 					</section>
@@ -81,7 +96,7 @@
 						<h4>Недоліки</h4>
 						<ul>
 							<li>
-								Дуже великий обсяг, в разі jpeg-тайлів - замилювання
+								Дуже великий обсяг
 							</li>
 							<li>
 								Неможливість динамічної зміни стилів
@@ -125,7 +140,7 @@
 						<h4>
 							GeoJson
 						</h4>
-						<p>GeoJSON — відкритий формат призначений для зберігання географічних структур даних, заснований на JSON</p>
+						<img src="images/js-fest.png" />
 					</section>
 					<section>
 						<h4>
@@ -141,21 +156,6 @@
 							<li>Feature</li>
 							<li>FeatureCollection</li>
 						</ul>
-					</section>
-					<section>
-						<pre>
-<code>
-{
-	"type": "FeatureCollection",
-	"features": [
-		{ "type": "Feature",
-			"geometry": {...},
-			"properties": {"prop0": "value0"}
-		},
-	]
-}
-</code>
-						</pre>
 					</section>
 					<section>
 						<pre>
@@ -214,6 +214,21 @@
     ]
 }
 </code></pre>
+					</section>
+					<section>
+						<pre>
+<code>
+{
+	"type": "FeatureCollection",
+	"features": [
+		{ "type": "Feature",
+			"geometry": {...},
+			"properties": {"prop0": "value0"}
+		},
+	]
+}
+</code>
+						</pre>
 					</section>
 					<section data-background-iframe="https://map-examples.herokuapp.com/public/dist/leaflet-regions.html">
 
@@ -283,6 +298,9 @@
 						data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-custom-buildings.html"
 					></section>
 					<section
+						data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-museum.html"
+					></section>
+					<section
 						data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-3d-model.html"
 					></section>
 				</section>
@@ -291,14 +309,19 @@
 					<ul>
 						<li><a href="https://github.com/mapbox/geojson-vt">geojson-vt</a></li>
 						<li><a href="https://github.com/mapbox/tippecanoe">tippecanoe</a></li>
+						<li><a href="https://tileserver.readthedocs.io/en/latest/">tileserver</a></li>
+						<li><a href="https://openmaptiles.com/server/">OpenMapTiles Map Server</a></li>
+						<li><a href="https://www.maptiler.com/">maptiler</a></li>
+						<li><a href="https://www.mapbox.com/mapbox-studio/">mapbox-studio</a></li>
 					</ul>
 				</section>
 				<section>
-					<h4>Допоміжні інструменти для роботи з картами</h4>
-					<ul>
-						<li><a href="https://turfjs.org/">turfjs</a></li>
-						<li><a href="https://tileserver.readthedocs.io/en/latest/">tileserver</a></li>
-					</ul>
+					<section>
+						<h4>turf js</h4>
+					</section>
+					<section
+						data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-selected-points.html"
+					></section>
 				</section>
 				<section>
 					<h2>Контактні дані</h2>
