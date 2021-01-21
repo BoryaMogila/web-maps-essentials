@@ -25,6 +25,14 @@
 	</head>
 	<body>
 		<div class="reveal">
+			<img style="
+		border: none;
+		box-shadow: none;
+height: 130px;
+position: fixed;
+left: 10px;
+top: 26px;
+" src="images/vin_js.jpg">
 			<div class="slides">
 <!--				slide 1-->
 				<section>
@@ -34,7 +42,13 @@
 					<br />
 					<div style="text-align: right; font-size: 14px">
 						<b>Борис Могила</b>
-						<p>DOM.RIA (напрям “Новобудови України”)</p>
+						<p>&lt;EPAM&gt;</p>
+					</div>
+				</section>
+				<section>
+					<img src="images/vin_js.jpg" width="400" />
+					<div>
+						<a target="_blank" href="http://vinnytsiajs.org/">vinnytsiajs.org</a>
 					</div>
 				</section>
 				<section>
@@ -42,7 +56,7 @@
 					<p>Презинтація</p>
 				</section>
 				<section>
-					<img src="images/presentation.png" style="width: 55%" />
+					<img src="images/examples.png" style="width: 55%" />
 					<p>Приклади</p>
 				</section>
 				<section>
@@ -58,8 +72,7 @@
 						<li>GeoJson</li>
 						<li>Варіанти виведення даних</li>
 						<li>Можливості векторних карт</li>
-						<li>Створення векторних тайлів</li>
-						<li>Допоміжні інструменти для роботи з картами</li>
+						<li>Корисні посилання</li>
 					</ul>
 				</section>
 				<section>
@@ -70,16 +83,42 @@
 					<section>
 						<img src="images/map-layers.png" />
 					</section>
+					<section>
+						<img src="images/web-mercator.gif" style="width: 800px;" />
+						<div>
+							<a href="https://en.wikipedia.org/wiki/Web_Mercator_projection"
+							target="_blank"
+						>
+							web mercator
+						</a>
+						</div>
+					</section>
+					<section>
+						<img src="images/true-size.gif" />
+						<div>
+							<a href="https://thetruesize.com/"
+							target="_blank"
+						>
+							thetruesize.com
+						</a>
+						</div>
+					</section>
 				</section>
 				<section>
 					<h4>Тайли і їх типи</h4>
-					<img src="images/tiles.jpg" style="width: 45%" />
+					<img src="images/tiles.png" />
+					<div>
+						<a href="https://en.wikipedia.org/wiki/Tiled_web_map" target="_blank">
+							Tiled web map
+						</a>
+					</div>
 				</section>
 				<section>
 					<section>
 						<h4>Растрові тайли</h4>
 					</section>
-					<section data-background-iframe="https://map-examples.herokuapp.com/public/dist/leaflet-example.html">
+					<section>
+						<img src="images/leaflet.gif" />
 					</section>
 					<section>
 						<h4>Переваги</h4>
@@ -108,7 +147,8 @@
 					<section>
 						<h4>Векторні тайли</h4>
 					</section>
-					<section data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-example.html">
+					<section>
+						<img src="images/mapbox.gif" />
 					</section>
 					<section>
 						<h4>Переваги</h4>
@@ -127,20 +167,21 @@
 							<li>
 								Ресурсомісткість і тривалість відтворення
 							</li>
-<!--							<li>-->
-<!--								В усіх свої формати векторних карт-->
-<!--							</li>-->
 						</ul>
 					</section>
 				</section>
-				<section data-background-iframe="https://map-examples.herokuapp.com/public/dist/compare-example.html">
+				<section>
+					<img src="images/compare.gif" />
 				</section>
 				<section>
 					<section>
 						<h4>
 							GeoJson
 						</h4>
-						<img src="images/js-fest.png" />
+						<img src="images/geojson.png" />
+						<div>
+							<a href="https://geojson.org/" target="_blank">geojson.org</a>
+						</div>
 					</section>
 					<section>
 						<h4>
@@ -230,26 +271,32 @@
 </code>
 						</pre>
 					</section>
-					<section data-background-iframe="https://map-examples.herokuapp.com/public/dist/leaflet-regions.html">
-
+					<section>
+						<img src="images/geojson-example.png" />
 					</section>
-					<section data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-regions.html">
-
 					</section>
 				</section>
 				<section>
+					<h4>Варіанти виведення даних</h4>
+				</section>
+				<section>
 					<section>
-						<h4>Варіанти виведення даних</h4>
+						<h4>70000 елементів на карті</h4>
 					</section>
 					<section>
-						<h4>
-							70000 елементів на карті
-						</h4>
+						<section>
+							<img src="images/geojson-leaflet.gif">
+						</section>
 						<div>
 							<a target="_blank" href="https://map-examples.herokuapp.com/public/dist/leaflet-points.html">
 								leaflet
 							</a>
 						</div>
+					</section>
+					<section>
+						<section>
+							<img src="images/geojson-mapbox.gif">
+						</section>
 						<div>
 							<a target="_blank" href="https://map-examples.herokuapp.com/public/dist/mapbox-points.html">
 								mapbox-gl
@@ -257,14 +304,30 @@
 						</div>
 					</section>
 					<section>
+						<h4>Недоліки</h4>
+						<ul>
+							<li>Всі дані тягнуться одночасно</li>
+							<li>Блокування основного потоку (leaflet)</li>
+							<li>Дуже довго</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
 						<h4>
 							70000 елементів на карті з кластерізацією
 						</h4>
+					</section>
+					<section>
+						<img src="images/leaflet-cluster.gif" />
 						<div>
 							<a target="_blank" href="https://map-examples.herokuapp.com/public/dist/leaflet-points-clusterization.html">
 								leaflet
 							</a>
 						</div>
+					</section>
+					<section>
+						<img src="images/mapbox-cluster.gif" />
 						<div>
 							<a target="_blank" href="https://map-examples.herokuapp.com/public/dist/mapbox-points-clusterization.html">
 								mapbox-gl
@@ -272,56 +335,179 @@
 						</div>
 					</section>
 					<section>
+						<h4>Недоліки</h4>
+						<ul>
+							<li>Всі дані тягнуться одночасно</li>
+							<li>На mapbox все ще довго</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h4>
+							Сервена кластеризація
+						</h4>
+					</section>
+					<section>
+						<img src="images/server-cluster.gif">
+					</section>
+					<section>
+						<h4>Недоліки</h4>
+						<ul>
+							<li>Немає доступу до всіх даних об'єкту</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
 						<h4>
 							70000 елементів на карті за допомогою тайлів
 						</h4>
+					</section>
+					<section>
+						<img src="images/leaflet-tiles.gif" />
 						<div>
 							<a target="_blank" href="https://map-examples.herokuapp.com/public/dist/leaflet-points-tiles.html">
 								leaflet
 							</a>
 						</div>
+					</section>
+					<section>
+						<img src="images/mapbox-tiles.gif" />
 						<div>
 							<a target="_blank" href="https://map-examples.herokuapp.com/public/dist/mapbox-points-tiles.html">
 								mapbox-gl
 							</a>
 						</div>
 					</section>
+					<section>
+						<h4>Недоліки</h4>
+						<ul>
+							<li>На leaflet незначні затупи</li>
+							<li>Відсутня кластерізація</li>
+						</ul>
+					</section>
 				</section>
 				<section>
 					<section>
 						<h4>Можливості векторних карт</h4>
 					</section>
-					<section
-						data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-3d-buildings.html"
-					></section>
-					<section
-						data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-custom-buildings.html"
-					></section>
-					<section
-						data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-museum.html"
-					></section>
-					<section
-						data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-3d-model.html"
-					></section>
-				</section>
-				<section>
-					<h4>Створення векторних тайлів</h4>
-					<ul>
-						<li><a href="https://github.com/mapbox/geojson-vt">geojson-vt</a></li>
-						<li><a href="https://github.com/mapbox/tippecanoe">tippecanoe</a></li>
-						<li><a href="https://tileserver.readthedocs.io/en/latest/">tileserver</a></li>
-						<li><a href="https://openmaptiles.com/server/">OpenMapTiles Map Server</a></li>
-						<li><a href="https://www.maptiler.com/">maptiler</a></li>
-						<li><a href="https://www.mapbox.com/mapbox-studio/">mapbox-studio</a></li>
-					</ul>
+					<section>
+						<img src="images/buildings.gif" />
+						<div>
+							<a href="https://map-examples.herokuapp.com/public/dist/mapbox-3d-buildings.html" target="_blank">
+								3d-buildinds
+							</a>
+						</div>
+					</section>
+					<section>
+						<img src="images/buldings-effects.gif" />
+						<div>
+							<a href="https://www.harp.gl/docs/master/examples/#rendering_post-effects_themes.html" target="_blank">
+								3d-buildinds styles
+							</a>
+						</div>
+					</section>
+					<section>
+						<img src="images/newbuilds.gif" />
+						<div>
+							<a href="https://map-examples.herokuapp.com/public/dist/mapbox-custom-buildings.html" target="_blank">
+								3d-newbuildings
+							</a>
+						</div>
+					</section>
+					<section>
+						<img src="images/museum.gif" />
+						<div>
+							<a href="https://map-examples.herokuapp.com/public/dist/mapbox-museum.html" target="_blank">
+								detailed buildings
+							</a>
+						</div>
+					</section>
+					<section>
+						<img src="images/camera-animation.gif" />
+						<div>
+							<a href="https://www.harp.gl/docs/master/examples/#getting-started_orbiting-view.html" target="_blank">
+								camera animation
+							</a>
+						</div>
+					</section>
+					<section>
+						<img src="images/model.gif" />
+						<div>
+							<a href="https://map-examples.herokuapp.com/public/dist/mapbox-3d-model.html" target="_blank">
+								3d-models
+							</a>
+						</div>
+					</section>
+					<section>
+						<img src="images/model-animated.gif" />
+						<div>
+							<a href="https://www.harp.gl/docs/master/examples/#threejs_animation.html" target="_blank">
+								animated 3d-models
+							</a>
+						</div>
+					</section>
 				</section>
 				<section>
 					<section>
-						<h4>turf js</h4>
+						<h4>Цікаві рішення</h4>
+						<ul>
+							<li><a target="_blank" href="https://leafletjs.com/">leafletjs</a></li>
+							<li><a target="_blank" href="https://openlayers.org/">openlayers</a></li>
+							<li><a target="_blank" href="https://docs.mapbox.com/mapbox-gl-js/api/">mapbox</a></li>
+							<li><a target="_blank" href="http://www.harp.gl/">harp.gl</a></li>
+						</ul>
 					</section>
-					<section
-						data-background-iframe="https://map-examples.herokuapp.com/public/dist/mapbox-selected-points.html"
-					></section>
+					<section>
+						<h4>Створення тайсетів</h4>
+						<ul>
+							<li><a target="_blank" href="https://github.com/mapbox/geojson-vt">geojson-vt</a></li>
+							<li><a target="_blank" href="https://www.npmjs.com/package/make-tile">make-tile</a></li>
+							<li><a target="_blank" href="https://github.com/mapbox/tippecanoe">tippecanoe</a></li>
+							<li><a target="_blank" href="https://tileserver.readthedocs.io/en/latest/">tileserver</a></li>
+							<li><a target="_blank" href="https://openmaptiles.com/server/">OpenMapTiles Map Server</a></li>
+							<li><a target="_blank" href="https://www.maptiler.com/">maptiler</a></li>
+						</ul>
+					</section>
+					<section>
+						<h4>Кластеризація</h4>
+						<ul>
+							<li><a target="_blank" href="https://github.com/mapbox/supercluster">supercluster</a></li>
+							<li>
+								<a target="_blank" href="https://www.slideshare.net/EvgeniyKhist/serverside-geoclustering-based-on-geohash">
+									geohash кластеризація
+								</a>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Створення власних стилів для карти</h4>
+						<ul>
+							<li><a target="_blank" href="https://www.mapbox.com/mapbox-studio/">mapbox-studio</a></li>
+							<li><a target="_blank" href="https://github.com/maputnik/editor">maputnik</a></li>
+						</ul>
+					</section>
+					<section>
+						<h4>Geocoding</h4>
+						<ul>
+							<li><a target="_blank" href="https://nominatim.org/">nominatim.org</a></li>
+							<li><a target="_blank" href="https://github.com/komoot/photon">photon</a></li>
+						</ul>
+					</section>
+					<section>
+						<h4>Генерація власних векторних тайлів</h4>
+						<ul>
+							<li><a target="_blank" href="https://github.com/openmaptiles/openmaptiles">openmaptiles</a></li>
+						</ul>
+					</section>
+					<section>
+						<h4>Робота з геоданими</h4>
+						<ul>
+							<li><a target="_blank" href="https://turfjs.org/">turfjs.org</a></li>
+							<li><a target="_blank" href="https://github.com/bjornharrtell/jsts">jsts</a></li>
+						</ul>
+					</section>
 				</section>
 				<section>
 					<h2>Контактні дані</h2>
